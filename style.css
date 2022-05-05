@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap");
+:root {
+  --background: #8db2e7;
+  --font: #403f4c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--font);
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 50vw;
+  font-family: "Comfortaa", cursive;
+}
+
+.login {
+  border: red 2px solid;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  position: relative;
+}
