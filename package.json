@@ -1,6 +1,24 @@
 {
   "dependencies": {
     "ejs": "^3.1.7",
-    "express": "^4.18.1"
-  }
+    "express": "^4.18.1",
+    "nodemon": "^2.0.16"
+  },
+  "name": "bankapp",
+  "description": "Frameworks used so far:\r  - Express.js for Backend Structure\r  - EJS for communicating variables with front end",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrewgdev/bankApp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andrewgdev/bankApp/issues"
+  },
+  "homepage": "https://github.com/andrewgdev/bankApp#readme"
 }
