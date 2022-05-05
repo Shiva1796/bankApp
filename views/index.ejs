@@ -4,20 +4,23 @@
     <img id="login-image" src="/images/login-image.jpg" />
     <h1>A Bank for the People by the People</h1>
     <div class="log-user">
-      <h2>Login</h2>
-      <h3>Client Username</h3>
-      <input id="username" />
-      <h3>Password</h3>
-      <input id="password" />
-      <button id="login-submit">Submit</button>
-      <h4>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
-        necessitatibus illo inventore autem consequatur animi, hic architecto
-        dicta? Magnam, saepe?Lorem ipsum, dolor sit amet consectetur
-        adipisicing elit. Corrupti laborum dolore vero sit rerum odio omnis
-        nesciunt impedit et tempora magnam ipsum perferendis, temporibus
-        quisquam doloribus? Consectetur aperiam voluptate ab.
-      </h4>
+      <form action="/" method="POST">
+        <h2>Login</h2>
+        <label for="username"><h3>Client Username</h3></label>
+        <input name="username" />
+        <label for="password"><h3>Password</h3></label>
+        <input type="password" name="password" />
+        <button type="submit" id="login-submit">Submit</button>
+        <button id="register"><a href="/register">Register Now</a></button>
+        <h4>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
+          necessitatibus illo inventore autem consequatur animi, hic architecto
+          dicta? Magnam, saepe?Lorem ipsum, dolor sit amet consectetur
+          adipisicing elit. Corrupti laborum dolore vero sit rerum odio omnis
+          nesciunt impedit et tempora magnam ipsum perferendis, temporibus
+          quisquam doloribus? Consectetur aperiam voluptate ab.
+        </h4>
+      </form>
     </div>
     <!-- <div class="create">
       <input id="create-user" />
