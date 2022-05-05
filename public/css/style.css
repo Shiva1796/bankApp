@@ -16,12 +16,20 @@ body {
   color: var(--font);
 }
 
+/* The Navbar is customized with the settings below */
+
 .nav {
-  margin-top: 0.5rem;
   display: flex;
   justify-content: flex-end;
-  margin-bottom: 1rem;
+  background-color: var(--secondary-bg);
+  padding: 0.5rem;
 }
+#logo {
+  font-size: 40px;
+  transform: translateX(-95rem);
+  color: var(--secondary-font);
+}
+
 .navbar {
   display: flex;
   flex-direction: row;
@@ -29,6 +37,11 @@ body {
   align-items: center;
   width: 40vw;
   font-family: "Comfortaa", cursive;
+  color: var(--secondary-font);
+}
+.navbar a {
+  text-decoration: none;
+  color: var(--secondary-font);
 }
 
 .navbar h2 {
@@ -40,6 +53,8 @@ body {
   background-color: var(--font);
   color: var(--secondary-font);
 }
+
+/* The login section is customized from the settings below */
 
 .login {
   display: flex;
@@ -59,8 +74,7 @@ body {
   height: 25rem;
   padding: 0.5rem;
   flex-direction: column;
-  gap: 2px;
-  text-align: center;
+  gap: 5px;
   font-family: "Comfortaa", cursive;
   font-size: 0.8rem;
   background-color: var(--secondary-bg);
@@ -71,6 +85,7 @@ body {
 .log-user h3 {
   font-size: 0.9rem;
   padding: 0.3rem;
+  margin-bottom: 5px;
 }
 
 #login-image {
@@ -79,9 +94,9 @@ body {
   background-position: center;
   background-size: cover;
   position: relative;
-  filter: blur(5px);
   border-radius: 10px;
-  z-index: 0;
+  z-index: 0.5;
+  filter: blur(4px);
 }
 .login h1 {
   position: absolute;
@@ -93,18 +108,41 @@ body {
 }
 
 #login-submit {
-  margin-top: 1rem;
-  padding: 0.7rem;
+  padding: 0.5rem;
   border: none;
+  cursor: pointer;
+  transition: 500ms;
 }
 #login-submit:hover {
-  background-color: var(--secondary-bg-t);
-  color: var(--secondary-font);
+  background-color: var(--background);
+}
+.log-user h2 {
+  margin-bottom: 2rem;
 }
 .log-user input {
   padding: 0.5rem;
+  width: 10rem;
+}
+.log-user h3 {
+  margin-top: 0.5rem;
 }
 .log-user h4 {
-  margin-top: 6.2rem;
+  margin-top: 4.5rem;
   font-size: 0.5rem;
+  text-align: center;
+}
+#register {
+  margin-top: 1rem;
+  font-size: 1rem;
+  width: 11rem;
+  padding: 0.25rem;
+  transition: 500ms;
+  border: none;
+}
+#register a {
+  text-decoration: none;
+  color: var(--font);
+}
+#register:hover {
+  background-color: var(--background);
 }
