@@ -1,53 +1,28 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title></title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="css/style.css" />
-    <script
-      src="https://kit.fontawesome.com/abe9c54cc4.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
-    <!--The navbar will remain same, it will be carried out to the user account page-->
-    <section class="nav">
-      <nav class="navbar">
-        <h2 id="home">Home</h2>
-        <h2 id="about">About</h2>
-        <h2 id="contact">Contact Us</h2>
-        <h2 id="testimonials">Testimonials</h2>
-      </nav>
-    </section>
-    <!-- The login section is for users to login to their accounts, the create user input fields are for creating new users, once the user logs in the login screen will be hidden-->
-    <section class="login">
-      <img id="login-image" src="/images/login-image.jpg" />
-      <h1>A Bank for the People by the People</h1>
-      <div class="log-user">
-        <h2>Login</h2>
-        <h3>Client Username</h3>
-        <input id="username" />
-        <h3>Password</h3>
-        <input id="password" />
-        <button id="login-submit">Submit</button>
-        <h4>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
-          necessitatibus illo inventore autem consequatur animi, hic architecto
-          dicta? Magnam, saepe?Lorem ipsum, dolor sit amet consectetur
-          adipisicing elit. Corrupti laborum dolore vero sit rerum odio omnis
-          nesciunt impedit et tempora magnam ipsum perferendis, temporibus
-          quisquam doloribus? Consectetur aperiam voluptate ab.
-        </h4>
-      </div>
-      <!-- <div class="create">
-        <input id="create-user" />
-        <input id="create-pass" />
-        <button id="create-submit">Submit</button>
-      </div> -->
-    </section>
-    <script src="js/script.js" async defer></script>
-  </body>
-</html>
+<%- include('partials/header') -%>
+  <!-- The login section is for users to login to their accounts, the create user input fields are for creating new users, once the user logs in the login screen will be hidden-->
+  <section class="login">
+    <img id="login-image" src="/images/login-image.jpg" />
+    <h1>A Bank for the People by the People</h1>
+    <div class="log-user">
+      <h2>Login</h2>
+      <h3>Client Username</h3>
+      <input id="username" />
+      <h3>Password</h3>
+      <input id="password" />
+      <button id="login-submit">Submit</button>
+      <h4>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
+        necessitatibus illo inventore autem consequatur animi, hic architecto
+        dicta? Magnam, saepe?Lorem ipsum, dolor sit amet consectetur
+        adipisicing elit. Corrupti laborum dolore vero sit rerum odio omnis
+        nesciunt impedit et tempora magnam ipsum perferendis, temporibus
+        quisquam doloribus? Consectetur aperiam voluptate ab.
+      </h4>
+    </div>
+    <!-- <div class="create">
+      <input id="create-user" />
+      <input id="create-pass" />
+      <button id="create-submit">Submit</button>
+    </div> -->
+  </section>
+<%- include('partials/footer') -%>
