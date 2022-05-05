@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap");
 :root {
   --background: #8db2e7;
+  --secondary-bg: #201e1f;
   --font: #403f4c;
+  --secondary-font: #ffffff;
 }
 
 * {
@@ -15,6 +17,7 @@ body {
 }
 
 .nav {
+  margin-top: 0.5rem;
   display: flex;
   justify-content: flex-end;
   margin-bottom: 1rem;
@@ -24,14 +27,61 @@ body {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  width: 50vw;
+  width: 40vw;
   font-family: "Comfortaa", cursive;
 }
 
+.navbar h2 {
+  transition: 500ms;
+  cursor: pointer;
+  padding: 10px;
+}
+.navbar h2:hover {
+  background-color: var(--font);
+  color: var(--secondary-font);
+}
+
 .login {
-  border: red 2px solid;
   display: flex;
   flex-direction: row;
   gap: 10px;
   position: relative;
+  justify-content: flex-end;
+}
+
+.log-user {
+  display: flex;
+  border-radius: 10px;
+  width: 15rem;
+  height: 25rem;
+  padding: 0.5rem;
+  flex-direction: column;
+  gap: 2px;
+  text-align: center;
+  font-family: "Comfortaa", cursive;
+  font-size: 0.8rem;
+  background-color: var(--secondary-bg);
+  color: var(--secondary-font);
+  font-size: 1rem;
+  margin-right: 0.3rem;
+}
+.log-user h3 {
+  font-size: 0.9rem;
+  padding: 0.3rem;
+}
+#login-submit {
+  margin-top: 1rem;
+  padding: 0.7rem;
+  border: none;
+}
+#login-submit:hover {
+  background-color: var(--secondary-bg-t);
+  color: var(--secondary-font);
+}
+.log-user input {
+  padding: 0.5rem;
+}
+.log-user h4 {
+  margin-top: 6.2rem;
+  font-size: 0.5rem;
 }
