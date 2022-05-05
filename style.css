@@ -47,6 +47,9 @@ body {
   gap: 10px;
   position: relative;
   justify-content: flex-end;
+  background-color: white;
+  padding: 0.15rem;
+  align-items: center;
 }
 
 .log-user {
@@ -69,6 +72,26 @@ body {
   font-size: 0.9rem;
   padding: 0.3rem;
 }
+
+#login-image {
+  width: 80vw;
+  height: 44vh;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  filter: blur(5px);
+  border-radius: 10px;
+  z-index: 0;
+}
+.login h1 {
+  position: absolute;
+  color: white;
+  margin-right: 30vw;
+  font-size: 3rem;
+  font-family: "Comfortaa", cursive;
+  text-shadow: 2px 2px #201e1f;
+}
+
 #login-submit {
   margin-top: 1rem;
   padding: 0.7rem;
