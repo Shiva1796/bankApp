@@ -1,6 +1,17 @@
 <%- include('partials/header') -%>
   <!-- The register section will have a form with registration details and a button to submit-->
   <section class="register">
-
+    <div class="reg-user">
+      <form action="/register" method="POST">
+        <h2>Login</h2>
+        <label for="username"><h3>Client Username</h3></label>
+        <input name="username" />
+        <label for="password"><h3>Password</h3></label>
+        <input type="password" name="password" />
+        <button type="submit" id="register-submit">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </button>
+      </form>
+    </div>
   </section>
 <%- include('partials/footer') -%>
