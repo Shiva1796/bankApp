@@ -1,8 +1,11 @@
 <%- include('partials/header') -%>
 <!-- The login section is for users to login to their accounts, the create user input fields are for creating new users, once the user logs in the login screen will be hidden-->
 <section class="login">
-  <img id="login-image" src="/images/login-image.jpg" />
-  <h1>A Bank for the People by the People</h1>
+  <!-- <img id="login-image" src="/images/login-image.png" /> -->
+  <h1>
+    A Bank by the <span class="highlight">People</span><br />
+    for the <span class="highlight">People</span>
+  </h1>
   <div class="log-user">
     <form action="/" method="POST">
       <h2>Login</h2>
@@ -13,25 +16,122 @@
       <button type="submit" id="login-submit">
         <i class="fa-solid fa-arrow-up-right-from-square"></i>
       </button>
-      <button id="register">
-        <a href="/register"
-          ><i class="fa-solid fa-address-card"></i>Register Now</a
-        >
-      </button>
-      <h4>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
-        necessitatibus illo inventore autem consequatur animi, hic architecto
-        dicta? Magnam, saepe?Lorem ipsum, dolor sit amet consectetur adipisicing
-        elit. Corrupti laborum dolore vero sit rerum odio omnis nesciunt impedit
-        et tempora magnam ipsum perferendis, temporibus quisquam doloribus?
-        Consectetur aperiam voluptate ab.
-      </h4>
     </form>
   </div>
-  <!-- <div class="create">
-      <input id="create-user" />
-      <input id="create-pass" />
-      <button id="create-submit">Submit</button>
-    </div> -->
 </section>
-<%- include('partials/footer') -%>
+<div class="connector">
+  <h4>
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum labore
+    illum molestiae reiciendis dolor pariatur reprehenderit non aut odit laborum
+    similique magni laudantium officia asperiores, delectus quidem totam
+    consectetur rerum perspiciatis quasi assumenda. Assumenda tempore est
+    cupiditate dignissimos libero praesentium.
+  </h4>
+  <h4 id="products-services">
+    <span class="special">Products</span> and
+    <span class="special">Services</span> <br /><span class="special"
+      ><i class="fa-solid fa-chevron-down"></i
+    ></span>
+  </h4>
+</div>
+<section class="services">
+  <div id="credit-card">
+    <h3>Credit Cards</h3>
+    <img src="images/creditcard.png" />
+  </div>
+  <div id="loan">
+    <h3>Personal<br />and<br />Business loans</h3>
+    <img src="images/loan.png" />
+  </div>
+  <div id="savings">
+    <h3>
+      Savings<br />and<br />
+      Investments
+    </h3>
+    <img src="images/savings.png" />
+  </div>
+  <div id="mortgage">
+    <h3>Mortgage</h3>
+    <img src="images/mortgage.png" />
+  </div>
+</section>
+<section class="tabs">
+  <div class="tabs-title">
+    <h2 class="tabs-description">Services</h2>
+    <h3 class="tabs-header">
+      Our services are simple, fast and reliable.
+    </h3>
+  </div>
+
+  <div class="operations">
+    <div class="operations__tab-container">
+      <button
+        class="btn operations__tab operations__tab--1 operations__tab--active"
+        data-tab="1"
+      >
+        <span>01</span>Instant Transfers
+      </button>
+      <button class="btn operations__tab operations__tab--2" data-tab="2">
+        <span>02</span>Instant Loans
+      </button>
+      <button class="btn operations__tab operations__tab--3" data-tab="3">
+        <span>03</span>Instant Closing
+      </button>
+    </div>
+    <div
+      class="operations__content operations__content--1 operations__content--active"
+    >
+      <div class="operations__icon operations__icon--1">
+        <svg>
+          <use xlink:href="images/icons.svg#icon-upload"></use>
+        </svg>
+      </div>
+      <h5 class="operations__header">
+        Tranfser money to anyone, instantly! No fees, no BS.
+      </h5>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+        ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        aliquip ex ea commodo consequat.
+      </p>
+    </div>
+
+    <div class="operations__content operations__content--2">
+      <div class="operations__icon operations__icon--2">
+        <svg>
+          <use xlink:href="images/icons.svg#icon-home"></use>
+        </svg>
+      </div>
+      <h5 class="operations__header">
+        Buy a home or make your dreams come true, with instant loans.
+      </h5>
+      <p>
+        Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+        cupidatat non proident, sunt in culpa qui officia deserunt mollit
+        anim id est laborum.
+      </p>
+    </div>
+    <div class="operations__content operations__content--3">
+      <div class="operations__icon operations__icon--3">
+        <svg>
+          <use xlink:href="images/icons.svg#icon-user-x"></use>
+        </svg>
+      </div>
+      <h5 class="operations__header">
+        No longer need your account? No problem! Close it instantly.
+      </h5>
+      <p>
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+        officia deserunt mollit anim id est laborum. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+        ea commodo consequat.
+      </p>
+    </div>
+  </div>
+</section>
+
+    <%- include('partials/footer') -%>
+  </div>
+</section>

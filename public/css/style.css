@@ -1,9 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap");
 :root {
-  --background: #8db2e7;
-  --secondary-bg: #201e1f;
+  --background: #201e1f;
+  --white: #fff;
+  --secondary-bg: #5cd384;
   --font: #403f4c;
   --secondary-font: #ffffff;
+  --gradient-primary: linear-gradient(to top left, #39b385, #9be15d);
+  --color-primary: #5ec576;
+  --color-secondary: #ffcb03;
+  --color-tertiary: #ff585f;
+  --color-primary-darker: #4bbb7d;
+  --color-secondary-darker: #ffbb00;
+  --color-tertiary-darker: #fd424b;
+  --color-primary-opacity: #5ec5763a;
+  --color-secondary-opacity: #ffcd0331;
+  --color-tertiary-opacity: #ff58602d;
 }
 
 * {
@@ -12,101 +23,105 @@
 }
 
 body {
-  background-color: var(--background);
+  background-color: var(--white);
   color: var(--font);
+  overflow-x: hidden;
 }
 
-/* The Navbar is customized with the settings below */
-
+/* NAVBAR */
 .nav {
   display: flex;
   justify-content: flex-end;
-  background-color: var(--secondary-bg);
+  background-color: var(--white);
   padding: 0.5rem;
 }
 #logo {
   font-size: 40px;
-  transform: translateX(-95rem);
-  color: var(--secondary-font);
+  display: flex;
+  justify-content: flex-start;
+  width: 47vw;
+  color: var(--font);
 }
-
 .navbar {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  width: 40vw;
+  width: 50vw;
   font-family: "Comfortaa", cursive;
-  color: var(--secondary-font);
 }
 .navbar a {
   text-decoration: none;
-  color: var(--secondary-font);
+  color: var(--font);
 }
-
 .navbar h2 {
   transition: 500ms;
   cursor: pointer;
   padding: 10px;
 }
-.navbar h2:hover {
-  background-color: var(--font);
-  color: var(--secondary-font);
+.navbar a:hover {
+  color: var(--secondary-bg);
 }
 
-/* The login section is customized from the settings below */
-
+/* LOGIN WINDOW */
 .login {
+  margin-top: 10rem;
   display: flex;
   flex-direction: row;
   gap: 10px;
-  position: relative;
   justify-content: flex-end;
-  background-color: white;
+  background-color: var(--white);
   padding: 0.15rem;
+  text-align: center;
   align-items: center;
+  height: 30vh;
 }
-
+/* This is used to highlight the "PEOPLE"  */
+.highlight {
+  position: relative;
+}
+.highlight::after {
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 0.5;
+  opacity: 0.7;
+  transform: scale(1.07, 1.05) skewX(-15deg);
+  background-image: var(--gradient-primary);
+}
+/* CSS for the login window */
 .log-user {
   display: flex;
+  text-align: start;
   border-radius: 10px;
   width: 15rem;
-  height: 25rem;
+  height: 15rem;
   padding: 0.5rem;
   flex-direction: column;
   gap: 5px;
   font-family: "Comfortaa", cursive;
   font-size: 0.8rem;
-  background-color: var(--secondary-bg);
-  color: var(--secondary-font);
-  font-size: 1rem;
-  margin-right: 0.3rem;
+  background-color: var(--font);
+  color: var(--white);
+  margin-right: 2rem;
 }
 .log-user h3 {
-  font-size: 0.9rem;
+  font-size: 1rem;
   padding: 0.3rem;
   margin-bottom: 5px;
 }
-
-#login-image {
-  width: 80vw;
-  height: 44vh;
-  background-position: center;
-  background-size: cover;
-  position: relative;
-  border-radius: 10px;
-  z-index: 0.5;
-  filter: blur(4px);
-}
 .login h1 {
   position: absolute;
-  color: white;
-  margin-right: 30vw;
+  margin-right: 40vw;
+  color: var(--font);
   font-size: 3rem;
+  line-height: 1.2;
   font-family: "Comfortaa", cursive;
-  text-shadow: 2px 2px #201e1f;
 }
-
 #login-submit {
   padding: 0.5rem;
   border: none;
@@ -114,7 +129,7 @@ body {
   transition: 500ms;
 }
 #login-submit:hover {
-  background-color: var(--background);
+  background-color: var(--secondary-bg);
 }
 .log-user h2 {
   margin-bottom: 2rem;
@@ -126,23 +141,263 @@ body {
 .log-user h3 {
   margin-top: 0.5rem;
 }
-.log-user h4 {
-  margin-top: 4.5rem;
-  font-size: 0.5rem;
+
+/* CONNECTOR IS JUST TO ADD SOME LENGTH TO THE PAGE  */
+.connector {
+  width: 100vw;
+  height: 55vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  z-index: 0;
+}
+.connector h4 {
+  margin-top: -5rem;
+  width: 50vw;
+  font-family: "Comfortaa", cursive;
+  font-size: 1rem;
+}
+
+/* SERVICES  */
+#products-services {
+  margin-top: 10rem;
+}
+.special {
+  color: var(--secondary-bg);
+}
+.services {
+  height: 100vh;
+  background-color: var(--background);
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  color: var(--secondary-font);
+  font-family: "Comfortaa", cursive;
+  font-size: 2rem;
+  text-shadow: 1px 1px #000000;
+  align-content: center;
+}
+.services img {
+  position: relative;
+  border: 4px rgba(0, 0, 0, 0.609) solid;
+  border-radius: 1rem;
+  cursor: pointer;
+  filter: brightness(0.75);
+}
+.services h3 {
+  cursor: pointer;
+  position: absolute;
+  z-index: 1;
+}
+#credit-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
-#register {
-  margin-top: 1rem;
-  font-size: 1rem;
-  width: 11rem;
-  padding: 0.25rem;
-  transition: 500ms;
+#loan {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+#savings {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+#mortgage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* TABS */
+.tabs {
+  font-family: "Comfortaa", cursive;
+}
+.tabs-title {
+  max-width: 80rem;
+  margin: 0.25rem auto 5rem auto;
+}
+.tabs-description {
+  font-size: 1.8rem;
+  margin-top: 0.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  color: var(--secondary-bg);
+}
+.tabs-header {
+  font-size: 3rem;
+  line-height: 1.3;
+  font-weight: 500;
+}
+.tabs button {
+  display: inline-block;
+  background-color: var(-);
+  font-size: 1.6rem;
+  font-family: inherit;
+  font-weight: 500;
   border: none;
+  padding: 1.25rem 4.5rem;
+  border-radius: 10rem;
+  cursor: pointer;
+  transition: all 0.3s;
 }
-#register a {
-  text-decoration: none;
-  color: var(--font);
+.tabs button:hover {
+  background-color: var(--color-primary-darker);
 }
-#register:hover {
+.tabs button--text {
+  display: inline-block;
+  background: none;
+  font-size: 1.7rem;
+  font-family: inherit;
+  font-weight: 500;
+  color: var(--color-primary);
+  border: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.operations {
+  max-width: 100vw;
+  margin: 12rem auto 0 auto;
+
+  background-color: #fff;
+}
+.operations__tab-container {
+  display: flex;
+  justify-content: center;
+}
+.operations__tab {
+  margin-right: 2.5rem;
+  transform: translateY(-50%);
+}
+.operations__tab span {
+  margin-right: 1rem;
+  font-weight: 600;
+  display: inline-block;
+}
+.operations__tab--1 {
+  background-color: var(--color-secondary);
+}
+
+.operations__tab--1:hover {
+  background-color: var(--color-secondary-darker);
+}
+.operations__tab--3 {
+  background-color: var(--color-tertiary);
+  margin: 0;
+}
+.operations__tab--3:hover {
+  background-color: var(--color-tertiary-darker);
+}
+.operations__tab--active {
+  transform: translateY(-66%);
+}
+.operations__content {
+  display: none;
+  font-size: 1.7rem;
+  padding: 2.5rem 7rem 6.5rem 7rem;
+}
+.operations__content--active {
+  display: grid;
+  grid-template-columns: 7rem 1fr;
+  column-gap: 3rem;
+  row-gap: 0.5rem;
+}
+.operations__header {
+  font-size: 2.25rem;
+  font-weight: 500;
+  align-self: center;
+}
+.operations__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+}
+
+.operations__icon svg {
+  height: 2.75rem;
+  width: 2.75rem;
+}
+
+.operations__content p {
+  grid-column: 2;
+}
+.operations__icon--1 {
+  background-color: var(--color-secondary-opacity);
+}
+.operations__icon--2 {
+  background-color: var(--color-primary-opacity);
+}
+.operations__icon--3 {
+  background-color: var(--color-tertiary-opacity);
+}
+.operations__icon--1 svg {
+  fill: var(--color-secondary-darker);
+}
+.operations__icon--2 svg {
+  fill: var(--color-primary);
+}
+.operations__icon--3 svg {
+  fill: var(--color-tertiary);
+}
+
+/* FOOTER */
+.seperator {
+  width: 100vw;
+  height: 0.15vh;
+  background-color: var(--secondary-bg);
+}
+footer {
+  width: 100vw;
+  height: 40vh;
   background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#footer-list {
+  cursor: pointer;
+  color: var(--secondary-bg);
+  width: 60vw;
+  font-size: 1rem;
+  font-family: "Comfortaa", cursive;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+#footer-list li {
+  list-style: none;
+  padding: 2px;
+  transition: 250ms;
+}
+#footer-list li:hover {
+  color: var(--white);
+}
+
+footer #register a {
+  text-decoration: none;
+  color: var(--background);
+  font-family: "Comfortaa", cursive;
+  padding: 10px;
+  background-color: var(--secondary-bg);
+  border-radius: 30px;
 }
