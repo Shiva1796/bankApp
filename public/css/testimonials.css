@@ -1,8 +1,8 @@
 
 .testimonials {
-    height: auto;
+    height: 320px;
     width: auto;
-    margin: 70px auto;
+    margin: 80px;
 }
 
 .container__div_slideshow {
@@ -11,15 +11,25 @@
     margin: 30px auto;
 }
 
-.slide {
+.slides1{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 
+.fade {
+    animation-name: fade;
+    animation-duration: 1.95s;
+}
+
+@keyframes fade {
+    from {opacity: .2}
+    to {opacity: 1}
+}
+
 .card__div_testimonial {
     height: 250px;
-    width: 115px;
+    width: 140px;
     margin: auto 20px;
     text-align: center;
 }
@@ -32,6 +42,7 @@
 .card__img {
     border-radius: 5px;
     box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.219);
+    text-align: center;
 }
 
 .card__q_quote {
@@ -45,7 +56,7 @@
 }
 
 .card__p_author {
-    font-size: 0.9;
+    font-size: 0.8em;
     font-weight: 600;
     font-family: Comfortaa, sans-serif;
 }
