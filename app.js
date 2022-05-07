@@ -1,3 +1,5 @@
+//---------------MODULES AND PLUGINS---------------
+
 //Dotenv is a module to protect API keys
 require('dotenv').config();
 //Express framework for back-end structure with nodeJS
@@ -82,6 +84,8 @@ passport.deserializeUser(function(user, done) {
     done(null, user);
 });
 
+
+//---------------WEBSITE STRUCTURE---------------
 app.route('/')
 .get((req,res) => {
     res.render("index");
