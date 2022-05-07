@@ -49,8 +49,8 @@ app.use(passport.session());
 main().catch(err => console.log(err));
 
 async function main() {
-  //const db = await mongoose.connect('mongodb+srv://admin-mauricio:'+process.env.MONGODB_KEY+'@cluster0.bdhma.mongodb.net/bankDB');
-  const db = await mongoose.connect('mongodb://localhost:27017/bankDB')
+  const db = await mongoose.connect('mongodb+srv://admin-mauricio:'+process.env.MONGODB_KEY+'@cluster0.bdhma.mongodb.net/bankDB');
+  //const db = await mongoose.connect('mongodb://localhost:27017/bankDB')
 }
 
 //Creates a schema for the database
