@@ -24,9 +24,25 @@
         <h2 id="about"><a href="/about">About</a></h2>
         <h2 id="contact"><a href="/contact">Contact</a></h2>
         <h2 id="testimonials"><a href="/testimonials">Testimonials</a></h2>
-        <h2 id="register">
-          <a href="/register">Register Now</a>
-        </h2>
+        <div class="dropdown" data-dropdown="">
+          <button class="login-link" data-dropdown-button>Login</button>
+          <div class="dropdown-menu">
+            <div class="log-user">
+              <form action="/" method="POST">
+                <label for="username"><h3>Client Username</h3></label>
+                <input name="username" />
+                <label for="password"><h3>Password</h3></label>
+                <input type="password" name="password" />
+                <button type="submit" id="login-submit">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Submit
+                </button>
+              </form>
+              <button id="register">
+                <a href="/register">New User? Register</a>
+              </button>
+            </div>
+          </div>
+        </div>
       </nav>
     </section>
   </body>

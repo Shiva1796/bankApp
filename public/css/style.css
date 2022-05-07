@@ -1,10 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap");
 :root {
   --background: #201e1f;
-  --white: #fff;
   --secondary-bg: #5cd384;
   --font: #403f4c;
-  --secondary-font: #ffffff;
+  --white: #ffffff;
   --gradient-primary: linear-gradient(to top left, #39b385, #9be15d);
   --color-primary: #5ec576;
   --color-secondary: #ffcb03;
@@ -53,9 +52,9 @@ body {
 .navbar a {
   text-decoration: none;
   color: var(--font);
+  transition: 250ms;
 }
 .navbar h2 {
-  transition: 500ms;
   cursor: pointer;
   padding: 10px;
 }
@@ -63,8 +62,98 @@ body {
   color: var(--secondary-bg);
 }
 
-/* LOGIN WINDOW */
-.login {
+/* CSS for the drop down menu */
+
+.dropdown {
+  position: relative;
+  margin-right: 2rem;
+}
+.dropdown-menu {
+  position: absolute;
+  top: 2.25rem;
+  right: -3rem;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-1rem);
+  transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
+}
+.dropdown.active > .login-link + .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.login-link {
+  background-color: white;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  border: none;
+  color: var(--font);
+  border-radius: 1rem;
+  font-family: "Comfortaa", cursive;
+  cursor: pointer;
+  transition: 250ms;
+}
+.login-link:hover {
+  color: var(--secondary-bg);
+}
+#register {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  background-color: none;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  transition: 250ms;
+}
+#register a {
+  color: var(--font);
+}
+#register:hover {
+  background-color: var(--secondary-bg);
+  color: var(--font);
+}
+/* CSS for the login window */
+.log-user {
+  display: flex;
+  text-align: start;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px 2px #888888;
+  width: 10rem;
+  height: 15rem;
+  padding: 0.5rem;
+  flex-direction: column;
+  gap: 5px;
+  font-family: "Comfortaa", cursive;
+  font-size: 0.8rem;
+  background-color: var(--white);
+  color: var(--font);
+}
+.log-user h2 {
+  margin-bottom: 2rem;
+}
+.log-user h3 {
+  font-size: 1rem;
+  padding: 0.3rem;
+  margin-bottom: 5px;
+  margin-top: 0.5rem;
+}
+.log-user input {
+  padding: 0.5rem;
+  width: 8.5rem;
+}
+#login-submit {
+  margin-top: 10px;
+  padding: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: 500ms;
+}
+#login-submit:hover {
+  background-color: var(--secondary-bg);
+}
+
+/* Main heading and title */
+.main-page {
   margin-top: 10rem;
   display: flex;
   flex-direction: row;
@@ -90,56 +179,18 @@ body {
   width: 100%;
   z-index: 0.5;
   opacity: 0.7;
-  transform: scale(1.07, 1.05) skewX(-15deg);
+  transform: scale(1.1, 1.02) skewX(-15deg);
   background-image: var(--gradient-primary);
 }
-/* CSS for the login window */
-.log-user {
-  display: flex;
-  text-align: start;
-  border-radius: 10px;
-  width: 15rem;
-  height: 15rem;
-  padding: 0.5rem;
-  flex-direction: column;
-  gap: 5px;
-  font-family: "Comfortaa", cursive;
-  font-size: 0.8rem;
-  background-color: var(--font);
-  color: var(--white);
-  margin-right: 2rem;
-}
-.log-user h3 {
-  font-size: 1rem;
-  padding: 0.3rem;
-  margin-bottom: 5px;
-}
-.login h1 {
+
+.main-page h1 {
   position: absolute;
+  margin-top: 10rem;
   margin-right: 40vw;
   color: var(--font);
-  font-size: 3rem;
+  font-size: 3.5rem;
   line-height: 1.2;
   font-family: "Comfortaa", cursive;
-}
-#login-submit {
-  padding: 0.5rem;
-  border: none;
-  cursor: pointer;
-  transition: 500ms;
-}
-#login-submit:hover {
-  background-color: var(--secondary-bg);
-}
-.log-user h2 {
-  margin-bottom: 2rem;
-}
-.log-user input {
-  padding: 0.5rem;
-  width: 10rem;
-}
-.log-user h3 {
-  margin-top: 0.5rem;
 }
 
 /* CONNECTOR IS JUST TO ADD SOME LENGTH TO THE PAGE  */
@@ -154,28 +205,30 @@ body {
   z-index: 0;
 }
 .connector h4 {
-  margin-top: -5rem;
+  margin-top: 15rem;
   width: 50vw;
   font-family: "Comfortaa", cursive;
   font-size: 1rem;
 }
+#products-services {
+  margin-top: 1rem;
+}
 
 /* SERVICES  */
-#products-services {
-  margin-top: 10rem;
-}
+
 .special {
   color: var(--secondary-bg);
 }
 .services {
   height: 100vh;
-  background-color: var(--background);
+  width: 100vw;
+  background-color: var(--white);
   display: grid;
   grid-template-columns: auto auto;
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  color: var(--secondary-font);
+  color: var(--white);
   font-family: "Comfortaa", cursive;
   font-size: 2rem;
   text-shadow: 1px 1px #000000;
@@ -183,7 +236,6 @@ body {
 }
 .services img {
   position: relative;
-  border: 4px rgba(0, 0, 0, 0.609) solid;
   border-radius: 1rem;
   cursor: pointer;
   filter: brightness(0.75);
@@ -393,11 +445,24 @@ footer {
   color: var(--white);
 }
 
-footer #register a {
-  text-decoration: none;
-  color: var(--background);
-  font-family: "Comfortaa", cursive;
-  padding: 10px;
+#register-footer {
   background-color: var(--secondary-bg);
-  border-radius: 30px;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  transition: 250ms;
+}
+
+footer #register-footer a {
+  text-decoration: none;
+  color: var(--font);
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  background-color: none;
+  border: none;
+}
+
+#register-footer:hover {
+  background-color: var(--white);
+  color: var(--font);
 }

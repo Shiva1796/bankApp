@@ -2,6 +2,22 @@ const tabs = document.querySelectorAll(".operations__tab");
 const tabsContainer = document.querySelector(".operations__tab-container");
 const tabsContent = document.querySelectorAll(".operations__content");
 
+//Dropdown menu for login and registering new users
+document.addEventListener("click", (e) => {
+  const isDropdownButton = e.target.matches("[data-dropdown-button]");
+  if (!isDropdownButton && e.target.closest("[data-dropdown]") != null) return;
+
+  let currentDropdown;
+  if (isDropdownButton) {
+    currentDropdown = e.target.closest("[data-dropdown]");
+    currentDropdown.classList.toggle("active");
+  }
+
+  document.querySelectorAll("[data-dropdown].active").forEach((dropdown) => {
+    if (dropdown === currentDropdown) return;
+    dropdown.classList.remove("active");
+  });
+});
 tabsContainer.addEventListener("click", function (e) {
   const clicked = e.target.closest(".operations__tab");
 
