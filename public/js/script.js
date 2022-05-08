@@ -1,6 +1,8 @@
 const tabs = document.querySelectorAll(".operations__tab");
 const tabsContainer = document.querySelector(".operations__tab-container");
 const tabsContent = document.querySelectorAll(".operations__content");
+const toggleButton = document.querySelector(".toggle-button");
+const navLinks = document.querySelector(".navbar");
 
 //Dropdown menu for login and registering new users
 document.addEventListener("click", (e) => {
@@ -35,4 +37,9 @@ tabsContainer.addEventListener("click", function (e) {
   document
     .querySelector(`.operations__content--${clicked.dataset.tab}`)
     .classList.add("operations__content--active");
+});
+
+//Hamburger Menu
+toggleButton.addEventListener("click", function () {
+  navLinks.classList.toggle("active");
 });
