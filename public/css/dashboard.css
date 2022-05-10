@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap");
+
+:root {
+  --background: #201e1f;
+  --secondary-bg: #5cd384;
+  --font: #403f4c;
+  --white: #ffffff;
+  --gradient-primary: linear-gradient(to top left, #39b385, #9be15d);
+  --color-primary: #5ec576;
+  --color-secondary: #ffcb03;
+  --color-tertiary: #ff585f;
+  --color-primary-darker: #4bbb7d;
+  --color-secondary-darker: #ffbb00;
+  --color-tertiary-darker: #fd424b;
+  --color-primary-opacity: #5ec5763a;
+  --color-secondary-opacity: #ffcd0331;
+  --color-tertiary-opacity: #ff58602d;
+}
+.dashboard {
+  height: 41.25vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  font-family: "Comfortaa", cursive;
+  text-align: center;
+  margin-bottom: 20rem;
+  align-items: center;
+}
+h1 {
+  font-size: 2rem;
+  color: var(--background);
+  margin-top: 2rem;
+}
+.balance {
+  display: flex;
+  justify-content: space-between;
+  width: 40vw;
+  align-items: baseline;
+}
+
+.movements {
+  background-color: var(--secondary-bg);
+  border-radius: 20px;
+  padding: 10px;
+  max-width: 60vw;
+  height: 50vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.widgets {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.transactions {
+  background-color: var(--white);
+  width: 20rem;
+  border-radius: 20px;
+  height: 50vh;
+}
+.transfer {
+  background-color: var(--white);
+  width: 20rem;
+  border-radius: 20px;
+  height: 15vh;
+}
+.loan {
+  background-color: var(--white);
+
+  border-radius: 20px;
+  width: 20rem;
+  height: 15vh;
+}
+.credit-score {
+  background-color: var(--white);
+
+  border-radius: 20px;
+  width: 20rem;
+  height: 15vh;
+}

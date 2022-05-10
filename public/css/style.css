@@ -30,7 +30,7 @@ body {
 }
 /* NAVBAR */
 .nav {
-  position: fixed;
+  /* position: fixed; */
   top: 0;
   display: flex;
   justify-content: flex-end;
@@ -411,7 +411,7 @@ body {
 }
 footer {
   width: 100vw;
-  height: 40vh;
+  height: 20vh;
   background-color: var(--background);
   display: flex;
   flex-direction: column;

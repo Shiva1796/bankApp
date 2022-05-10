@@ -1,6 +1,21 @@
 <%- include('partials/header') -%>
-  <!-- The about us section will have the bank statement and all the options for the logged in client-->
-  <section class="dashboard">
-    <h1>Welcome <%=userName%></h1>
-  </section>
+<!-- The about us section will have the bank statement and all the options for the logged in client-->
+<script src="js/scripts_dashboard.js" async defer></script>
+<link rel="stylesheet" href="css/dashboard.css" />
+<section class="dashboard">
+  <h1 id="greeting">Welcome back!</h1>
+  <div class="balance">
+    <h2>Current Balance</h2>
+    <h1 class="current-balance">$25000</h1>
+  </div>
+
+  <div class="movements">
+    <div class="transactions"></div>
+    <div class="widgets">
+      <div class="transfer"></div>
+      <div class="loan"></div>
+      <div class="credit-score"></div>
+    </div>
+  </div>
+</section>
 <%- include('partials/footer') -%>
