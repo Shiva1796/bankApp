@@ -11,21 +11,30 @@ const account1 = {
   name: "Shiva",
   userName: "shiva",
   password: 1234,
-  movements: [5000, 3400, -150, -790, -3210, -1000, 8500, -30, 5000],
+  movements: [
+    5000, 3400, -150, -790, -3210, -1000, 8500, -30, 5000, 200, 450, -400, 3000,
+    -650, -130, 70, 1300, 50, 3000,
+  ],
   interestRate: 1.5,
 };
 const account2 = {
   name: "Mauricio",
   userName: "mauricio",
   password: 1234,
-  movements: [200, 450, -400, 3000, -650, -130, 70, 1300, 50, 3000],
+  movements: [
+    200, 450, -400, 3000, -650, -130, 70, 1300, 50, 3000, 5000, 3400, -150,
+    -790, -3210, -1000, 8500, -30, 5000,
+  ],
   interestRate: 1.2,
 };
 const account3 = {
   name: "Andrew",
   userName: "andrew",
   password: 1234,
-  movements: [-200, 450, 400, 3000, -650, -130, 70, 1300, 50],
+  movements: [
+    -200, 450, 400, 3000, -650, -130, 70, 1300, 50, 200, 450, -400, 3000, -650,
+    -130, 70, 1300, 50, 3000, 5000, 3400,
+  ],
   interestRate: 1.5,
 };
 
@@ -35,9 +44,9 @@ const accounts = [account1, account2, account3];
 const displayTransactions = function (movements) {
   transactionsContainer.innerHTML = "";
   movements.forEach(function (mov, i) {
-    const html = `<div class="transaction"> Transaction ${
-      i + 1
-    } : ${mov} $</div>`;
+    const html = `<div class="transactions">
+    <div class="transaction-number">${i + 1}</div>
+    <div class="transaction">${mov}</div></div>`;
     transactionsContainer.insertAdjacentHTML("afterbegin", html);
   });
 };
@@ -45,7 +54,7 @@ const displayTransactions = function (movements) {
 //Function to calculate balance
 const calcBalance = function (movements) {
   const currentBalance = movements.reduce((acc, mov) => acc + mov, 0);
-  balance.textContent = `${currentBalance} $`;
+  balance.textContent = `Your current balance is ${currentBalance} $`;
 };
 
 let currentAccount;

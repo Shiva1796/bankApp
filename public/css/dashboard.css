@@ -52,21 +52,41 @@ h1 {
 }
 .transactions-container {
   display: flex;
+  padding-top: 0.5rem;
+  overflow: scroll;
   padding-left: 5px;
-  flex-direction: column;
+  flex-direction: column-reverse;
   width: 20vw;
   height: 50vh;
-  justify-content: flex-start;
-  background-color: var(--background);
+  justify-content: flex-end;
+  align-items: center;
+  background-color: var(--white);
   border-radius: 5px;
+}
+.transactions {
+  width: 18rem;
+  margin-bottom: 0.25rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(128, 128, 128, 0.379);
+  border-radius: 20px;
+}
+.transaction-number {
+  font-size: 0.5rem;
+  display: flex;
+  padding: 2px 10px;
+  background-color: var(--secondary-bg);
+  border-radius: 10px;
+  width: 0.5rem;
 }
 
 .transaction {
-  margin-top: 10px;
-  border: var(--background) 2px solid;
-  color: var(--white);
-  width: 18rem;
+  font-size: 1rem;
+  color: var(--background);
+  width: 8rem;
   display: flex;
-  align-items: center;
-  height: 2rem;
+  margin-right: 12px;
+  justify-content: flex-end;
 }
