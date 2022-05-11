@@ -23,37 +23,14 @@ const account2 = {
 };
 const account3 = {
   name: "Andrew",
+  userName: "andrew",
   password: 1234,
   movements: [-200, 450, 400, 3000, -650, -130, 70, 1300, 50],
   interestRate: 1.5,
 };
 
 const accounts = [account1, account2, account3];
-//The function below is made to calculate the total balance of the account
 
-// const createUsernames = function (accounts) {
-//   accounts.forEach(function (account) {
-//     account.userName = account.name
-//       .toLowerCase()
-//       .split(" ")
-//       .map((name) => name[0])
-//       .join("");
-//   });
-// };
-
-// createUsernames(accounts);
-let currentAccount;
-
-submit.addEventListener("click", (e) => {
-  e.preventDefault();
-  currentAccount = accounts.find((acc) => acc.userName === inputName.value);
-
-  if (currentAccount.password === Number(accPin.value)) {
-    welcomeMessage.textContent = `Welcome back, ${
-      currentAccount.name.split(" ")[0]
-    }`;
-  }
-});
 //Function to display transactions
 const displayTransactions = function (movements) {
   transactionsContainer.innerHTML = "";
@@ -71,6 +48,19 @@ const calcBalance = function (movements) {
   balance.textContent = `${currentBalance} $`;
 };
 
-//Functions
-calcBalance(account1.movements);
-displayTransactions(account1.movements);
+let currentAccount;
+//Logic for logging in
+submit.addEventListener("click", (e) => {
+  e.preventDefault();
+  currentAccount = accounts.find((acc) => acc.userName === inputName.value);
+
+  if (currentAccount?.password === Number(accPin.value)) {
+    welcomeMessage.textContent = `Welcome back, ${
+      currentAccount.name.split(" ")[0]
+    }`;
+
+    //Using the current account variable whenever a user logs in their current balance and transactions will be shown
+    calcBalance(currentAccount.movements);
+    displayTransactions(currentAccount.movements);
+  }
+});
