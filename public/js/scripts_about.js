@@ -73,7 +73,6 @@ function prev() {
         element.classList.remove("hide");
     } else {
         element = $(".about-carousel").lastElementChild;
-        console.log(element);
         element.classList.add("hidden_prev");
         element.classList.remove("hide");
     }
