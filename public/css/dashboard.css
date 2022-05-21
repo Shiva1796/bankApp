@@ -27,25 +27,26 @@
   align-items: center;
 }
 h1 {
-  font-size: 2rem;
   color: var(--background);
   margin-top: 2rem;
+  width: 40vw;
 }
 .balance {
-  display: flex;
-  justify-content: space-between;
-  width: 40vw;
-  align-items: baseline;
+  transform: translateX(-10rem);
+  font-size: 0.8rem;
+}
+#greeting {
+  font-size: 2rem;
 }
 
 .movements {
   background-color: var(--secondary-bg);
   border-radius: 8px;
   padding: 10px;
-  max-width: 60vw;
+  width: 60vw;
   height: 50vh;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 0.75fr 1fr;
   align-items: center;
   justify-content: center;
   gap: 1rem;
@@ -53,10 +54,9 @@ h1 {
 .transactions-container {
   display: flex;
   padding-top: 0.5rem;
-  overflow: scroll;
   padding-left: 5px;
   flex-direction: column-reverse;
-  width: 20vw;
+  width: 18vw;
   height: 50vh;
   justify-content: flex-end;
   align-items: center;
@@ -64,21 +64,22 @@ h1 {
   border-radius: 5px;
 }
 .transactions {
-  width: 18rem;
-  margin-bottom: 0.25rem;
+  width: 18vw;
+  border-bottom: rgba(0, 0, 0, 0.249) 0.5px solid;
+  margin-bottom: 0.5rem;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background-color: rgba(128, 128, 128, 0.379);
-  border-radius: 20px;
+  transition: 250ms;
+  padding-top: 4px;
 }
 .transaction-number {
-  font-size: 0.5rem;
+  font-size: 0.7rem;
   display: flex;
   padding: 2px 10px;
   background-color: var(--secondary-bg);
-  border-radius: 10px;
+  border-radius: 50%;
   width: 0.5rem;
 }
 
@@ -89,4 +90,63 @@ h1 {
   display: flex;
   margin-right: 12px;
   justify-content: flex-end;
+}
+.transactions:hover {
+  background-color: rgba(128, 128, 128, 0.258);
+}
+.tools {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.loan {
+  background-color: white;
+  width: 32vw;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  border-radius: 20px;
+}
+.loan h3 {
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+.loan h4 {
+  margin-left: 5px;
+  font-size: 0.5rem;
+  color: black;
+  margin-bottom: 1rem;
+  margin-top: 5px;
+}
+.loan form {
+  margin-left: 5px;
+  display: flex;
+  flex-direction: column;
+  width: 25rem;
+  text-align: start;
+  align-items: flex-start;
+}
+.loan form label {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.loan input {
+  padding: 2px;
+  margin-bottom: 5px;
+}
+.loan button {
+  margin-left: 5px;
+  margin-top: 5px;
+  width: 10rem;
+  padding: 5px;
+  border-radius: 10px;
+  border: none;
+  font-family: "Comfortaa", cursive;
+  transition: 250ms;
+}
+.loan button:hover {
+  background-color: var(--secondary-bg);
 }

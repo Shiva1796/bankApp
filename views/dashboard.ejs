@@ -5,7 +5,6 @@
 <section class="dashboard">
   <h1 id="greeting"></h1>
   <div class="balance">
-    <h2></h2>
     <h1 class="current-balance"></h1>
   </div>
 
@@ -14,6 +13,22 @@
       <div class="transactions">
         <div class="transaction-number">1</div>
         <div class="transaction">5</div>
+      </div>
+    </div>
+    <div class="tools">
+      <div class="loan">
+        <h3>
+          Apply for a personal or business loan now with great interest rates!
+        </h3>
+        <h4>*You can only apply to borrow 2x your account balance</h4>
+        <form>
+          <label for="loan-amount"
+            >How much would you like to borrow today?</label
+          >
+          <input type="number" id="amount" placeholder="$0000" />
+        </form>
+        <button id="submit-btn" href="#">Submit for approval</button>
+        <h1 id="message"></h1>
       </div>
     </div>
   </div>
