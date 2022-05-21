@@ -145,8 +145,8 @@ body {
   margin-top: 0.5rem;
 }
 .log-user input {
-  padding: 0.5rem;
-  width: 8.5rem;
+  padding: 0.25rem;
+  width: 7rem;
 }
 #login-submit {
   margin-top: 10px;
@@ -449,6 +449,7 @@ footer {
 }
 
 footer #register-footer a {
+  font-family: "Comfortaa", cursive;
   text-decoration: none;
   color: var(--font);
   margin-top: 0.5rem;

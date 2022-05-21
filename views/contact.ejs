@@ -1,6 +1,26 @@
 <%- include('partials/header') -%>
-  <!-- The contact section will have a form to send messages to us-->
-  <section class="contact">
-
-  </section>
+<link rel="stylesheet" href="css/contact.css" />
+<!-- The contact section will have a form to send messages to us-->
+<section class="contact">
+  <div class="contact-form">
+    <h2>Please fill out the form below and we will be in touch shortly!</h2>
+    <form id="contact-us">
+      <label for="first-name">First Name: </label>
+      <input type="text" id="f-name" placeholder="First Name" />
+      <label for="last-name">Last Name: </label>
+      <input type="text" id="l-name" placeholder="Last Name" />
+      <label for="email">E-mail Address: </label>
+      <input type="email" id="e-mail" placeholder="email@email.com" />
+      <label for="phone">Phone Number: </label>
+      <input type="number" id="phone" placeholder="(012) 345 6789" />
+    </form>
+    <button id="submit">Submit</button>
+    <p id="disclaimer">
+      By clicking the submit button you are agreeing to be contacted by The
+      People Bank, if you miss our call you can always call us back to
+      re-enquire. Thankyou for trusting The People Bank and we will be in touch
+      shortly
+    </p>
+  </div>
+</section>
 <%- include('partials/footer') -%>

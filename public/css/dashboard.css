@@ -16,6 +16,10 @@
   --color-secondary-opacity: #ffcd0331;
   --color-tertiary-opacity: #ff58602d;
 }
+body,
+html {
+  overflow-y: hidden;
+}
 .dashboard {
   height: 41.25vh;
   width: 100vw;
@@ -43,10 +47,10 @@ h1 {
   background-color: var(--secondary-bg);
   border-radius: 8px;
   padding: 10px;
-  width: 60vw;
+  width: 52vw;
   height: 50vh;
   display: grid;
-  grid-template-columns: 0.75fr 1fr;
+  grid-template-columns: 0.5fr 1fr;
   align-items: center;
   justify-content: center;
   gap: 1rem;
